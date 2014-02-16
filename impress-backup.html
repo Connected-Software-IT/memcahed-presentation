@@ -1,18 +1,33 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=1024" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>Memcached | An open source distributed caching system</title>
-
+    <title>Memcached  | An open source distributed caching system</title>
+    
     <meta name="description" content="Memcached is an open source distributed caching system." />
     <meta name="author" content="Mani Mishra" />
 
-    <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
-    <link href="css/impress-demo.css" rel="stylesheet" />
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
 
+    <!--
+        
+        Impress.js doesn't depend on any external stylesheet. Script adds all styles it needs for
+        presentation to work.
+        
+        This style below contains styles only for demo presentation. Browse it to see how impress.js
+        classes are used to style presentation steps, or how to apply fallback styles, but I don't want
+        you to use them directly in your presentation.
+        
+        Be creative, build your own. We don't really want all impress.js presentations to look the same,
+        do we?
+        
+        When creating your own presentation get rid of this file. Start from scratch, it's fun!
+        
+    -->
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    
     <link rel="shortcut icon" href="favicon.png" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 </head>
@@ -35,18 +50,17 @@
     it can be found later, when `hint` element is being described.
     
 -->
-
 <body class="impress-not-supported">
 
-    <!--
+<!--
     For example this fallback message is only visible when there is `impress-not-supported` class on body.
 -->
-    <div class="fallback-message">
-        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
-        <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
-    </div>
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
 
-    <!--
+<!--
     
     Now that's the core element used by impress.js.
     
@@ -67,9 +81,9 @@
     right around the corner of this tag ;)
     
 -->
-    <div id="impress" data-transition-duration="1200">
+<div id="impress">
 
-        <!--
+    <!--
         
         Here is where interesting thing start to happen.
         
@@ -87,7 +101,7 @@
         
     -->
 
-        <!--
+    <!--
         
         The `id` attribute of the step element is used to identify it in the URL, but it's optional.
         If it is not defined, it will get a default value of `step-N` where N is a number of slide.
@@ -102,49 +116,60 @@
         Using classic `id`-based links like `#step-2` makes these links usable also in fallback mode.
         
     -->
-        <!-- What is memcached section-->
-        <div id="what-is-memcached" class="step" data-x="0" data-y="0" data-scale="8">
+
+    <div id="what-is-memcached" class="step" data-x="0" data-y="-1500" data-scale="8">
             <h1> What is memcached?</h1>
-        </div>
+    </div>
 
-        <div id="memcached1" class="step" data-x="2000" data-y="0" data-scale="4">
-            <span class="try">memcached is a <b>high-performance</b>, <b>distributed</b>, <b>memory object</b> caching system, generic in nature.
+    <!--
+        
+        This is an example of step element being scaled.
+        
+        Again, we use a `data-` attribute, this time it's `data-scale="4"`, so it means that this
+        element will be 4 times larger than the others.
+        From presentation and transitions point of view it means, that it will have to be scaled
+        down (4 times) to make it back to its correct size.
+        
+    -->
+    <div id="memcached1" class="step" data-x="0" data-y="0" data-scale="4">
+        <span class="try">memcached is a <b>high-performance</b>, <b>distributed</b>, <b>memory object</b> caching system, generic in nature.
 </span>
-        </div>
+    </div>
 
-
-        <div id="its" class="step" data-x="6000" data-y="0" data-scale="4">
-            <p>It's a <b>key-based cache daemon</b>
-                </br>that stores <b>data</b> and <b>objects</b>
-                </br>wherever dedicated or spare</br> <b>RAM</b> is available for very quick access.
-            </p>
-        </div>
-        <div id="its1" class="step" data-x="10000" data-y="0" data-scale="4">
-            <p>A dumb <b>distributed hash table</b>.</br>Doesn’t provide <b>redundancy, failover or authentication</b>.</br>the client has to handle that.
-            </p>
-        </div>
-
-        <!--ends-->
-
-        <!-- Why use memcached section-->
-        <div id="why-use-memcahed" class="step" data-x="13000" data-y="2000" data-z="-3000" data-scale="8">
+    <!--
+        
+        This element introduces rotation.
+        
+        Notation shouldn't be a surprise. We use `data-rotate="90"` attribute, meaning that this
+        element should be rotated by 90 degrees clockwise.
+        
+    -->
+    <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
+        <p>It's a <b>key-based cache daemon</b></br> that stores <b>data</b> and <b>objects</b></br> wherever dedicated or spare</br> <b>RAM</b> is available for very quick access. 
+</p>
+    </div>
+    <div id="its1" class="step" data-x="1800" data-y="5500" data-rotate="180" data-scale="5">
+       <p>A dumb <b>distributed hash table</b>.</br>Doesn’t provide <b>redundancy, failover or authentication</b>. </br>the client has to handle that. 
+</p>
+    </div>
+    <div id="why-use-memcahed" class="step" data-x="0" data-y="0" data-z="-3000" data-scale="8">
             <h1> Why use memcached?</h1>
-        </div>
-        <div class="step" data-x="18000" data-y="2000" data-z="-3000" data-rotate="90" data-scale="4">
-            <p>to <b>improve</b> the entire</br>application(MyR Web-app) <b>response time</b>, load times of pages are significantly <b>faster</b>
-            </p>
-            </span>
-        </div>
-        <div class="step" data-x="22000" data-y="2000" data-z="-3000" data-rotate="180" data-scale="4">
-            <span class="try">to <b>dynamically refresh/reload</b> the cache without <b>restarting</b> the application servers.
-</span>
-        </div>
-        <div class="step" data-x="26000" data-y="2000" data-z="-3000" data-rotate="270" data-scale="4">
-            <span class="try">to <b>reduce</b> the <b>load</b></br> on the <b>iServices</b> by caching data BEFORE it hits the middle layer.
-</span>
-        </div>
+    </div>
 
-        <!--
+<div id="memcached2" class="step" data-x="500" data-y="2000" data-z="-3000" data-rotate="90">
+        <span class="try">to <b>improve</b> the entire </br>application(MyR Web-app) <b>response time</b>, load times of pages are significantly <b>faster</b>.
+</span>
+    </div>
+    <div class="step" data-x="1000" data-y="4000" data-z="-3000" data-rotate="180" data-scale="4">
+        <span class="try">to <b>dynamically refresh/reload</b> the cache without <b>restarting</b> the application servers.
+</span>
+    </div>
+    <div class="step" data-x="3000" data-y="6000" data-z="-3000" data-rotate="270" data-scale="4">
+        <span class="try">to <b>reduce</b> the <b>load</b></br> on the <b>iServices</b> by caching data BEFORE it hits the middle layer.
+</span>
+    </div>
+
+    <!--
         
         And now it gets really exciting! We move into third dimension!
         
@@ -153,16 +178,16 @@
         positioned far away from us (by 3000px).
         
     -->
-        <div id="memcahed-arch" class="step" data-x="2280" data-y="2500" data-z="-4000" data-scale="8">
-            <h1> Memcached Architecture</h1>
-        </div>
+    <div id="memcahed-arch" class="step" data-x="2280" data-y="2500" data-z="-4000"  data-scale="8">
+            <h1> memcached architecture</h1>
+    </div>
 
-        <div id="arch-diagram" class="step" data-x="2825" data-y="2325" data-z="-4000" data-rotate="300" data-scale="1">
-            <!-- <img src="../images/arch.jpg">-->
-            <img src="http://i.imgur.com/qKDzdHr.gif">
-        </div>
+    <div id="arch-diagram" class="step" data-x="2825" data-y="2325" data-z="-4000" data-rotate="300" data-scale="1">
+       <!-- <img src="../images/arch.jpg">-->
+        <img src="http://i.imgur.com/qKDzdHr.gif">
+    </div>
 
-        <!--
+    <!--
         
         This step here doesn't introduce anything new when it comes to data attributes, but you
         should notice in the demo that some words of this text are being animated.
@@ -182,46 +207,50 @@
         Only one current step has the `present` class.
         
     -->
-        <div id="memcahed-protocol" class="step" data-x="0" data-y="0" data-rotate="200" data-scale="8">
+     <div id="memcahed-protocol" class="step" data-x="0" data-y="0" data-rotate="200" data-scale="8">
             <h1> memcached protocol</h1>
-        </div>
+    </div>
 
-        <div id="memcached2" class="step" data-x="500" data-y="2000" data-z="-6000" data-rotate="90" data-scale="4">
-            <span class="try">uses a <b>protocol</b> that many languages implement with an <b>API</b>
+    <div id="memcached2" class="step" data-x="500" data-y="2000" data-z="-6000" data-rotate="90" data-scale="4">
+        <span class="try">uses a <b>protocol</b> that many languages implement with an <b>API</b>
     </span>
-        </div>
-        <div class="step" data-x="1000" data-y="4000" data-z="-6000" data-rotate="180" data-scale="4">
-            <span class="try">Languages that implement it:</br><b>
+    </div>
+    <div class="step" data-x="1000" data-y="4000" data-z="-6000" data-rotate="180" data-scale="4">
+        <span class="try">Languages that implement it:</br><b>
                     Perl, PHP, Python, Ruby, Java, C#, C, Lua, Postgres, MySQL</b>
     </span>
-        </div>
-        <div class="step" data-x="3000" data-y="6000" data-z="-6000" data-rotate="270" data-scale="4">
-            <span class="try">because it is a protocol we can even use telnet</br>
+    </div>
+    <div class="step" data-x="3000" data-y="6000" data-z="-6000" data-rotate="270" data-scale="4">
+        <span class="try">because it is a protocol we can even use telnet</br>
                 <b> shell> telnet [ip_address] [port_no]</b>
 
     </span>
-        </div>
-        <div class="step" data-x="6000" data-y="9000" data-z="-6000" data-rotate="360" data-scale="4">
-            <span class="try">provides <b>set</b>, <b>get</b> and others commands to perform <b>CRUD</b> operations.
+    </div>
+    <div class="step" data-x="6000" data-y="9000" data-z="-6000" data-rotate="360" data-scale="4">
+        <span class="try">provides <b>set</b>, <b>get</b> and others commands to perform <b>CRUD</b> operations.
     </span>
-        </div>
-        <div id="memcahed-config" class="step" data-x="2280" data-y="2500" data-rotate="200" data-scale="8">
+</div>
+     <div id="memcahed-config" class="step" data-x="2280" data-y="2500" data-rotate="200" data-scale="8">
             <h1> myr memcached configuration</h1>
-        </div>
-        <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
-            <p>running as <b class="positioning">deamon</b>,on port <b class="rotating">11211</b> and with <b class="scaling">128MB RAM</b> allocated, <b class="rotating">1024</b> maximum concurrent connections.</p>
-        </div>
+    </div>
+    <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
+        <p>running as <b class="positioning">deamon</b>,on port <b class="rotating">11211</b> and with <b class="scaling">128MB RAM</b> allocated, <b class="rotating">1024</b> maximum concurrent connections.</p>
+    </div>
 
-        <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
-            <p>production has <b>two</b> instances of <b class="imagination">memcached for failover.</b>
-            </p>
-        </div>
+    <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
+        <p>production has <b>two</b> instances of <b class="imagination">memcached for failover.</b></p>
+    </div>
 
-        <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="7">
-            <p>want to see in action?</p>
-            <q><a href="https://myrdemo.corp.webex.com/MyAccountWeb/invalidateCache.do" target="_blank">Goto the web-interface</a>, Luke!</q>
-        </div>
-        <!--
+    <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="7">
+        <p>want to see in action?</p>
+        <q><a href="https://myrdemo.corp.webex.com/MyAccountWeb/invalidateCache.do" target="_blank">Goto the web-interface</a>, Luke!</q>
+    </div>
+
+    <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
+        <p>credits:</p>
+    </div>
+
+    <!--
         
         And the last one shows full power and flexibility of impress.js.
         
@@ -233,11 +262,12 @@
         as `data-rotate` (these two are basically aliases).
         
     -->
-        <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
-            <p><span class="have">Q</span>  <span class="you">u</span>  <span class="noticed">e</span>  <span class="its">s</span>  <span class="in">t</span><span class="have">i</span><span class="you">o</span><span class="noticed">n</span><span class="its">s</span>?</p>
-        </div>
+    <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
+        <p><span class="have">this is</span> <span class="you">made</span> <span class="noticed">using</span> <span class="its">JavaScript</span> <span class="in">library</span> <b>impress js<sup>*</sup></b>?</p>
+        <span class="footnote">* beat that, prezi ;)</span>
+    </div>
 
-        <!--
+    <!--
         
         So to make a summary of all the possible attributes used to position presentation steps, we have:
         
@@ -252,12 +282,12 @@
         CSS transfrom docs: https://developer.mozilla.org/en/CSS/transform
         
     -->
-        <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
-        </div>
-
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
     </div>
 
-    <!--
+</div>
+
+<!--
     
     Hint is not related to impress.js in any way.
     
@@ -281,16 +311,16 @@
     Just sayin' ;)
     
 -->
-    <div class="hint">
-        <p>Use a spacebar or arrow keys to navigate</p>
-    </div>
-    <script>
-        if ("ontouchstart" in document.documentElement) {
-            document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
-        }
-    </script>
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
 
-    <!--
+<!--
     
     Last, but not least.
     
@@ -305,12 +335,10 @@
     Of course you can wrap it in any kind of "DOM ready" event, but I was too lazy to do so ;)
     
 -->
-    <script src="js/impress.js"></script>
-    <script>
-        impress().init();
-    </script>
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
 
-    <!--
+<!--
     
     The `impress()` function also gives you access to the API that controls the presentation.
     
@@ -336,7 +364,6 @@
 -->
 
 </body>
-
 </html>
 
 <!--
@@ -383,3 +410,4 @@
     Cheers!
     
 -->
+
